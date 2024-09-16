@@ -1,5 +1,5 @@
 import React from "react";
-import Image from 'next/image'
+import Image from 'next/image';
 import {
   Avatar,
   AvatarFallback,
@@ -17,7 +17,7 @@ import { Button } from "@/components/ui/button"
 
 
 export default function Utilities() {
-  return (<div className="py-6 ">
+  return (<div className="pt-4 gap-6 flex">
 <DropdownMenu>
   <DropdownMenuTrigger>
     <Image 

@@ -11,20 +11,31 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        customBlue: '#DAE6F2',
       },
       fontSize: {
         '18': '18px',
+        '28': '28px',
       },
-
       lineHeight: {
         '22': '22px', 
+        '34': '34px',
       },
       width: {
+        '1440': '1440px',
+        '360': '360px',
         '365': '365px', 
+        '1047': '1047px',
       },
-
       height: {
-        '38': '38px', 
+        '86': '86px',
+        '50': '50px',
+        '38': '38px',
+        '190': '190px',
+        '157': '157px',
+      },
+      maxWidth: {
+        '1440': '1440px',
       },
     },
   },

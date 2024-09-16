@@ -7,17 +7,11 @@ import Utilities from "./utilities/page";
 
 export default function Header() {
     return (
-        <header className="flex justify-between">
-            <div className="py-8 pl-7">
-             <Logo />   
-            </div>
-        
-        <div className="flex">
+        <header className="flex justify-between m-auto md:w-1440 md:h-86 sm:w-360 sm:h-50">
+         <Logo />  
          <NavBar />
         <Search />
         <Utilities />    
-        </div>
-       
         </header>
     )
 }
