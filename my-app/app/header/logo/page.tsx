@@ -1,5 +1,6 @@
 import React from "react";
 
 export default function Logo() {
-    return (<p>HarmonyHR</p>);
+    return (<p className="text-xl font-semibold">
+      HarmonyHR</p>);
   }

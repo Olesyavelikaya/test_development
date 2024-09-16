@@ -12,6 +12,20 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontSize: {
+        '18': '18px',
+      },
+
+      lineHeight: {
+        '22': '22px', 
+      },
+      width: {
+        '365': '365px', 
+      },
+
+      height: {
+        '38': '38px', 
+      },
     },
   },
   plugins: [],
