@@ -23,73 +23,73 @@ export default function MenuBar() {
     <>
       <nav className="flex justify-between gap-4 font-medium text-sm leading-22 pt-8 pb-12">
         <Link
-          href="/personal"
+          href="/my-info/personal"
           className={`px-4 py-4 w-[90px] h-12 flex items-center justify-center rounded-t-lg ${linkStyle(
-            "/personal"
+            "/personal",
           )}`}
         >
           Personal
         </Link>
         <Link
-          href="/job"
+          href="/my-info/job"
           className={`px-4 py-4 w-[90px] h-12 flex items-center justify-center rounded-t-lg ${linkStyle(
-            "/job"
+            "/job",
           )}`}
         >
           Job
         </Link>
         <Link
-          href="/time-off"
+          href="/my-info/time-off"
           className={`px-4 py-4 w-[90px] h-12 flex items-center justify-center rounded-t-lg ${linkStyle(
-            "/time-off"
+            "/my-info/time-off",
           )}`}
         >
           Time Off
         </Link>
         <Link
-          href="/emergency"
+          href="/my-info/emergency"
           className={`px-4 py-4 w-[90px] h-12 flex items-center justify-center rounded-t-lg ${linkStyle(
-            "/emergency"
+            "/emergency",
           )}`}
         >
           Emergency
         </Link>
         <Link
-          href="/documents"
+          href="/my-info/documents"
           className={`px-4 py-4 w-[90px] h-12 flex items-center justify-center rounded-t-lg ${linkStyle(
-            "/documents"
+            "/documents",
           )}`}
         >
           Documents
         </Link>
         <Link
-          href="/notes"
+          href="/my-info/notes"
           className={`px-4 py-4 w-[90px] h-12 flex items-center justify-center rounded-t-lg ${linkStyle(
-            "/notes"
+            "/notes",
           )}`}
         >
           Notes
         </Link>
         <Link
-          href="/benefits"
+          href="/my-info/benefits"
           className={`px-4 py-4 w-[90px] h-12 flex items-center justify-center rounded-t-lg ${linkStyle(
-            "/benefits"
+            "/benefits",
           )}`}
         >
           Benefits
         </Link>
         <Link
-          href="/training"
+          href="/my-info/training"
           className={`px-4 py-4 w-[90px] h-12 flex items-center justify-center rounded-t-lg ${linkStyle(
-            "/training"
+            "/training",
           )}`}
         >
           Training
         </Link>
         <Link
-          href="/assets"
+          href="/my-info/assets"
           className={`px-4 py-4 w-[90px] h-12 flex items-center justify-center rounded-t-lg ${linkStyle(
-            "/assets"
+            "/assets",
           )}`}
         >
           Assets
