@@ -21,7 +21,7 @@ export default function MenuBar() {
 
   return (
     <>
-      <nav className="flex justify-between gap-4 font-medium text-sm leading-22 pt-8 pb-12">
+      <nav className="flex justify-between gap-4 font-medium text-sm leading-22 pt-8 ">
         <Link
           href="/my-info/personal"
           className={`px-4 py-4 w-[90px] h-12 flex items-center justify-center rounded-t-lg ${linkStyle(

@@ -8,7 +8,7 @@ export default function AvatarMain() {
         width={150}
         height={150}
         alt="qa"
-        className="rounded-full p-0 z-30 relative"
+        className="rounded-full p-0 z-50 relative"
       />
     </>
   );

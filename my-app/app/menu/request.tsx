@@ -15,11 +15,11 @@ export default function Request() {
     <>
       <Select>
         <SelectTrigger className="w-[162px] h-[33px] border-black">
-          <SelectValue placeholder="Select a fruit" />
+          <SelectValue placeholder="Request a Change" />
         </SelectTrigger>
-        <SelectContent>
+        <SelectContent className="bg-white">
           <SelectGroup>
-            <SelectLabel>Request a Change</SelectLabel>
+            <SelectLabel></SelectLabel>
             <SelectItem value="apple">Lan</SelectItem>
             <SelectItem value="banana">Name</SelectItem>
           </SelectGroup>
@@ -31,7 +31,7 @@ export default function Request() {
           <Image src="/settings.png" width={16} height={16} alt="setting" />
           <SelectValue placeholder="" />
         </SelectTrigger>
-        <SelectContent>
+        <SelectContent className="bg-white">
           <SelectGroup>
             <SelectLabel>Fruits</SelectLabel>
             <SelectItem value="apple">Apple</SelectItem>

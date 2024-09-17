@@ -6,7 +6,7 @@ import InfoMe from "./infoMe";
 
 export default function Menu() {
   return (
-    <div className="bg-customBlue">
+    <div className="bg-customBlue z-0 relative">
       <div className="flex m-auto md:w-1440 sm:w-360 md:h-190 sm:h-157">
         <div className="mt-8 ml-20 relative z-0">
           <div className="pl-8">

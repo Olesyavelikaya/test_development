@@ -12,6 +12,10 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
         customBlue: "#DAE6F2",
+        backgroundBody: "#F0F3F8",
+        darkBlue: "#204973",
+        link: "#3758AB",
+        gray: "#7C96B1",
       },
       fontSize: {
         "18": "18px",
