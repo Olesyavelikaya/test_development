@@ -11,7 +11,7 @@ import DataTable from "./dataTable";
 export default function TimeOff() {
   return (
     <div>
-      <div className="md:ml-[575px] md:w-1047 sm:w-360 bg-white">
+      <div className="md:ml-[575px] md:w-1047 sm:w-360 bg-white rounded-b-xl">
         <div className="flex pt-12 content-between md:w-1047 sm:w-360 px-4">
           <div className="flex gap-2">
             <span className="pt-1.5">
@@ -104,7 +104,7 @@ export default function TimeOff() {
           </span>
           <span className="text-darkBlue text-sm font-medium ">History</span>
         </div>
-        <div className="px-4 pt-1.5">
+        <div className="px-4 pt-4">
           <DataTable />
         </div>
       </div>

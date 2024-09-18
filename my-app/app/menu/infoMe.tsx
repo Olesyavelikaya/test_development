@@ -5,7 +5,7 @@ export default function InfoMe() {
   return (
     <div className="gap-4 flex flex-col">
       <div className="z-30 relative bottom-1.5 ">
-        <Card className="w-225 h-[130px] rounded-2xl py-6 px-6 flex justify-start bg-white ">
+        <Card className="w-225 h-[130px] rounded-2xl py-6 px-6 flex justify-start bg-white border-0">
           <CardContent className="p-0 flex flex-col gap-4">
             <p className="flex gap-2 text-sm font-medium">
               <svg
@@ -55,7 +55,7 @@ export default function InfoMe() {
           </CardContent>
         </Card>
       </div>
-      <Card className="w-225 h-[123px] rounded-2xl py-6 px-6 flex justify-start bg-white">
+      <Card className="w-225 h-[123px] rounded-2xl py-6 px-6 flex justify-start bg-white border-0">
         <CardContent className="p-0 flex flex-col gap-2 text-sm font-medium">
           <p>Hire Date</p>
           <div>
@@ -64,7 +64,7 @@ export default function InfoMe() {
           </div>
         </CardContent>
       </Card>
-      <Card className="w-225 h-[165px] rounded-2xl py-6 px-6 flex justify-start bg-white">
+      <Card className="w-225 h-[165px] rounded-2xl py-6 px-6 flex justify-start bg-white border-0">
         <CardContent className="p-0 flex flex-col gap-1.5 text-sm font-medium">
           <p className="flex gap-2 text-sm font-medium">
             <svg
@@ -147,7 +147,7 @@ export default function InfoMe() {
           </p>
         </CardContent>
       </Card>
-      <Card className="w-225 h-[198px] rounded-2xl py-6 px-6 flex justify-start bg-white">
+      <Card className="w-225 h-[198px] rounded-2xl py-6 px-6 flex justify-start bg-white border-0">
         <CardContent className="p-0 flex flex-col gap-2 text-sm font-medium">
           <p>Direct Reports</p>
           <div className="flex flex-col gap-2">

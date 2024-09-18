@@ -13,7 +13,7 @@ import { Button } from "@/components/ui/button";
 
 export default function Utilities() {
   return (
-    <div className="pt-4 gap-6 flex">
+    <div className="pt-6 gap-6 flex">
       <DropdownMenu>
         <DropdownMenuTrigger>
           <Image src="/settings.png" width={24} height={24} alt="setting" />
