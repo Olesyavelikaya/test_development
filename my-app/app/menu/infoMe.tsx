@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function InfoMe() {
   return (
-    <div className="gap-4 flex flex-col">
+    <div className="md:gap-4 md:flex md:flex-col md:ml-6 hidden">
       <div className="z-30 relative bottom-1.5 ">
         <Card className="w-225 h-[130px] rounded-2xl py-6 px-6 flex justify-start bg-white border-0">
           <CardContent className="p-0 flex flex-col gap-4">

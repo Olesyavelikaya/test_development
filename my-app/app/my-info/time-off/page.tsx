@@ -10,16 +10,16 @@ import DataTable from "./dataTable";
 
 export default function TimeOff() {
   return (
-    <div>
-      <div className="md:ml-[575px] md:w-1047 sm:w-360 bg-white rounded-b-xl">
-        <div className="flex pt-12 content-between md:w-1047 sm:w-360 px-4">
-          <div className="flex gap-2">
+    <div className="mx-auto max-w-1440">
+      <div className="md:ml-[355px] md:w-1047 sm:w-360 bg-white rounded-b-xl">
+        <div className="flex md:pt-12 pt-0 content-between md:w-1047 sm:w-360 px-4">
+          <div className="md:flex md:gap-2 hidden">
             <span className="pt-1.5">
               <Image src="/time.png" width={16} height={15} alt="time" />
             </span>
             <h2 className="text-darkBlue text-xl font-medium">Time Off</h2>
           </div>
-          <div className=" flex gap-6 ml-auto ">
+          <div className=" flex flex-col py-4 md:py-0 gap-2 md:flex-row md:gap-6 ml-auto ">
             <div>
               <p className="font-medium text-sm">
                 Accrual Level Start Date{" "}
@@ -28,7 +28,7 @@ export default function TimeOff() {
             </div>
             <Popover>
               <PopoverTrigger asChild>
-                <Button className="border border-black -mt-4  w-[149px] h-[33px]">
+                <Button className="border border-black md:-mt-4 -mt-0  w-[149px] h-[33px] ml-auto md:ml-0">
                   Add Time Off Policy
                 </Button>
               </PopoverTrigger>

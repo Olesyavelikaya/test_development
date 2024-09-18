@@ -14,7 +14,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} border-box mx-auto bg-backgroundBody h-[1515px]`}
+        className={`${inter.className} border-box mx-auto bg-backgroundBody sm:max-h-[1515px] sm:min-h-min h-auto`}
       >
         <Header />
         <main>{children}</main>

@@ -9,9 +9,9 @@ import Image from "next/image";
 
 export default function StatisticCard() {
   return (
-    <div className="flex gap-12 my-6 justify-center">
+    <div className="flex md:gap-12 gap-4 my-6 md:justify-center overflow-x-auto whitespace-nowrap pl-6 md:pl-0">
       <div>
-        <Card className="w-[264px] h-[138px] border-0 bg-backgroundBody rounded flex flex-col items-center gap-1 py-4">
+        <Card className="w-[264px] h-[138px] border-0 bg-backgroundBody rounded-lg flex flex-col items-center gap-1 py-4">
           <CardHeader className="p-0">
             <CardTitle className="text-xl">Sick</CardTitle>
           </CardHeader>
@@ -32,7 +32,7 @@ export default function StatisticCard() {
       </div>
 
       <div>
-        <Card className="w-[264px] h-[138px] border-0 bg-backgroundBody rounded flex flex-col items-center gap-1 py-4">
+        <Card className="w-[264px] h-[138px] border-0 bg-backgroundBody rounded-lg flex flex-col items-center gap-1 py-4">
           <CardHeader className="p-0">
             <CardTitle className="text-xl">Annual Leave </CardTitle>
           </CardHeader>
@@ -52,7 +52,7 @@ export default function StatisticCard() {
       </div>
 
       <div>
-        <Card className="w-[264px] h-[138px] border-0 bg-backgroundBody rounded flex flex-col items-center gap-1 py-4">
+        <Card className="w-[264px] h-[138px] border-0 bg-backgroundBody rounded-lg flex flex-col items-center gap-1 py-4">
           <CardHeader className="p-0">
             <CardTitle className="text-xl">Comp/in Lieu Time</CardTitle>
           </CardHeader>

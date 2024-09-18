@@ -7,10 +7,17 @@ import Utilities from "./utilites";
 export default function Header() {
   return (
     <header className=" bg-white">
-      <div className="flex justify-between m-auto md:w-1440 md:h-86 sm:w-360 sm:h-50 sm:py-1.5 sm:px-6">
+      <div className="flex justify-between md:m-auto md:w-1440 md:h-86 w-360 h-50 py-1.5 px-6 md:py-0 ">
         <Logo />
-        <NavBar />
-        <Search />
+        <div className="flex flex-row sm:space-x-4 md:gap-10 gap-8">
+          <div className="sm:order-2 order-1">
+            <Search />
+          </div>
+          <div className="order-2 sm:order-1">
+            <NavBar />
+          </div>
+        </div>
+
         <Utilities />
       </div>
     </header>

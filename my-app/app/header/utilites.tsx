@@ -13,38 +13,44 @@ import { Button } from "@/components/ui/button";
 
 export default function Utilities() {
   return (
-    <div className="pt-6 gap-6 flex">
-      <DropdownMenu>
-        <DropdownMenuTrigger>
-          <Image src="/settings.png" width={24} height={24} alt="setting" />
-        </DropdownMenuTrigger>
-        <DropdownMenuContent>
-          <DropdownMenuLabel>Settings</DropdownMenuLabel>
-          <DropdownMenuSeparator />
-        </DropdownMenuContent>
-      </DropdownMenu>
-      <DropdownMenu>
-        <DropdownMenuTrigger>
-          <Image src="/qa.png" width={24} height={24} alt="qa" />
-        </DropdownMenuTrigger>
-        <DropdownMenuContent>
-          <DropdownMenuLabel>QA</DropdownMenuLabel>
-          <DropdownMenuSeparator />
-          <DropdownMenuItem>Team</DropdownMenuItem>
-          <DropdownMenuItem>Subscription</DropdownMenuItem>
-        </DropdownMenuContent>
-      </DropdownMenu>
-      <DropdownMenu>
-        <DropdownMenuTrigger>
-          <Image src="/bell.png" width={21} height={24} alt="bell" />
-        </DropdownMenuTrigger>
-        <DropdownMenuContent>
-          <DropdownMenuLabel>Notifications</DropdownMenuLabel>
-          <DropdownMenuSeparator />
-          <DropdownMenuItem>Notifications</DropdownMenuItem>
-        </DropdownMenuContent>
-      </DropdownMenu>
-      <DropdownMenu>
+    <div className="md:pt-6 gap-6 flex">
+      <div className="hidden sm:block pt-4 ">
+        <DropdownMenu>
+          <DropdownMenuTrigger>
+            <Image src="/settings.png" width={24} height={24} alt="setting" />
+          </DropdownMenuTrigger>
+          <DropdownMenuContent>
+            <DropdownMenuLabel>Settings</DropdownMenuLabel>
+            <DropdownMenuSeparator />
+          </DropdownMenuContent>
+        </DropdownMenu>
+      </div>
+      <div className="hidden sm:block pt-4">
+        <DropdownMenu>
+          <DropdownMenuTrigger>
+            <Image src="/qa.png" width={24} height={24} alt="qa" />
+          </DropdownMenuTrigger>
+          <DropdownMenuContent>
+            <DropdownMenuLabel>QA</DropdownMenuLabel>
+            <DropdownMenuSeparator />
+            <DropdownMenuItem>Team</DropdownMenuItem>
+            <DropdownMenuItem>Subscription</DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
+      </div>
+      <div className="hidden sm:block pt-4" >
+        <DropdownMenu>
+          <DropdownMenuTrigger>
+            <Image src="/bell.png" width={21} height={24} alt="bell" />
+          </DropdownMenuTrigger>
+          <DropdownMenuContent>
+            <DropdownMenuLabel>Notifications</DropdownMenuLabel>
+            <DropdownMenuSeparator />
+            <DropdownMenuItem>Notifications</DropdownMenuItem>
+          </DropdownMenuContent>
+        </DropdownMenu>
+      </div>
+      <DropdownMenu >
         <DropdownMenuTrigger>
           <Avatar>
             <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />

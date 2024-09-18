@@ -6,7 +6,7 @@ export default function MyInfoLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div>
+    <div className="min-w-1440 mx-auto">
       <Menu />
       <div>{children}</div>
     </div>

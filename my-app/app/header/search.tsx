@@ -3,11 +3,11 @@ import { Input } from "@/components/ui/input";
 
 export default function Search() {
   return (
-    <div className="md:pt-8 relative">
+    <div className="md:pt-8 pt-px md:pr-6 pr-0 relative">
       <Input
         type="Search"
         placeholder="Search"
-        className="pl-10 pr-4 py-2 w-full w-365 h-38 border-black rounded-xl"
+        className="md:pl-10 md:pr-4 md:py-2 w-full md:w-365 md:h-38 w-[48px] h-[32px] py-2 pl-8 pr-4 border-black rounded-xl "
       />
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -15,7 +15,7 @@ export default function Search() {
         viewBox="0 0 24 24"
         stroke-width="1.5"
         stroke="currentColor"
-        className="size-6 absolute left-2 md:top-[50px] transform -translate-y-1/2 w-6 h-6"
+        className="size-6 absolute left-3 md:top-[50px] top-[16px]  md:left-2 transform -translate-y-1/2 w-6 h-6"
       >
         <path
           stroke-linecap="round"
