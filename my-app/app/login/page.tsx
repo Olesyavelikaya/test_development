@@ -1,4 +1,6 @@
-import * as React from "react";
+'use client';
+
+
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -10,8 +12,47 @@ import {
 } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { useMutation } from '@apollo/client';
+import { LOGIN_MUTATION } from '../apollo/loginMutation';
+import { REFRESH_TOKEN } from "../apollo/refreshTokenMutation";
+import { useAuthStore } from '../store/userAuthStore';
+import { useRouter } from 'next/navigation';
 
 export default function LoginForm() {
+  const [login, { loading: loginLoading, error: loginError }] = useMutation(LOGIN_MUTATION);
+  const [refreshToken, { loading: refreshLoading, error: refreshError }] = useMutation(REFRESH_TOKEN);
+  const setTokens = useAuthStore((state) => state.setTokens);
+  const router = useRouter();
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const email = (event.target as HTMLFormElement).email.value;
+    const password = (event.target as HTMLFormElement).password.value;
+
+    try {
+      const { data } = await login({ variables: { email, password } });
+      const { access_token, refresh_token } = data.login;
+      setTokens(access_token, refresh_token);
+      router.push('/my-info/time');
+    } catch (error) {
+      console.error(error);
+    }
+  };
+  const handleRefreshToken = async () => {
+    const refreshTokenFromStore = useAuthStore.getState().refresh_token;
+    if (!refreshTokenFromStore) {
+      console.error('No refresh token found');
+      return;
+    }
+    try {
+      const { data } = await refreshToken({ variables: { refreshToken: refreshTokenFromStore } });
+      const { access_token, refresh_token } = data.refreshToken;
+      setTokens(access_token, refresh_token);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
     <Card className="w-full max-w-sm">
       <CardHeader>
@@ -21,18 +62,27 @@ export default function LoginForm() {
         </CardDescription>
       </CardHeader>
       <CardContent className="grid gap-4">
-        <div className="grid gap-2">
-          <Label htmlFor="email">Email</Label>
-          <Input id="email" type="email" placeholder="m@example.com" required />
-        </div>
-        <div className="grid gap-2">
-          <Label htmlFor="password">Password</Label>
-          <Input id="password" type="password" required />
-        </div>
+        <form onSubmit={handleSubmit}>
+          <div className="grid gap-2">
+            <Label htmlFor="email">Email</Label>
+            <Input id="email" type="email" placeholder="m@example.com" required />
+          </div>
+          <div className="grid gap-2">
+            <Label htmlFor="password">Password</Label>
+            <Input id="password" type="password" required />
+          </div>
+          <CardFooter className="mt-4">
+            <Button className="w-full" type="submit" disabled={loginLoading}>
+              {loginLoading ? 'Logging in...' : 'Sign in'}
+            </Button>
+          </CardFooter>
+        </form>
+        {loginError && <p className="text-red-500">Error: {loginError.message}</p>}
+        <Button className="w-full mt-4" onClick={handleRefreshToken} disabled={refreshLoading}>
+          {refreshLoading ? 'Refreshing token...' : 'Refresh Token'}
+        </Button>
+        {refreshError && <p className="text-red-500">Error: {refreshError.message}</p>}
       </CardContent>
-      <CardFooter>
-        <Button className="w-full">Sign in</Button>
-      </CardFooter>
     </Card>
   );
 }

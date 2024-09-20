@@ -1,6 +1,5 @@
 import "./globals.css";
 import Header from "./header/page";
-//import Menu from "./menu/page";
 
 import { Inter } from "next/font/google";
 
@@ -14,7 +13,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${inter.className} border-box mx-auto bg-backgroundBody sm:max-h-[1515px] sm:min-h-min h-auto`}
+        className={`${inter.className} border-box mx-auto bg-backgroundBody md:h-[1515px] md:min-h-min h-auto`}
       >
         <Header />
         <main>{children}</main>
