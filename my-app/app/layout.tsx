@@ -1,6 +1,5 @@
 import "./globals.css";
-import Header from "./header/page";
-
+import Header from "./header/Header";
 import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -15,8 +14,10 @@ export default function RootLayout({
       <body
         className={`${inter.className} border-box mx-auto bg-backgroundBody md:h-[1515px] md:min-h-min h-auto`}
       >
-        <Header />
-        <main>{children}</main>
+        <>
+          <Header />
+          <main>{children}</main>
+        </>
       </body>
     </html>
   );
