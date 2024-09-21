@@ -13,7 +13,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table"
-import { datas } from "./data";
+import  datas from "./data.json";
 
 export default function DataTable() {
   return (

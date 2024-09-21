@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Сбросить все стили после этой строки */
 body,
 h1,
 h2,

@@ -1,18 +1,18 @@
-import {create} from 'zustand';
+import { create } from 'zustand';
 
 type AuthState = {
   access_token: string | null;
   refresh_token: string | null;
-  password?: string | null;
 };
 
 type AuthAction = {
-  setTokens: (access_token: string, refresh_token: string, password: string) => void;
+  setTokens: (access_token: string, refresh_token: string) => void;
+  clearTokens: () => void;
 };
 
 export const useAuthStore = create<AuthState & AuthAction>((set) => ({
-  access_token: null,
-  refresh_token: null,
-  password: null,
-  setTokens: (access_token, refresh_token, password) => set({ access_token, refresh_token, password }),
+  access_token: '',
+  refresh_token: '',
+  setTokens: (access_token, refresh_token) => set({ access_token, refresh_token }),
+  clearTokens: () => set({ access_token: '', refresh_token: '' }),
 }));

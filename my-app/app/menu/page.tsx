@@ -3,9 +3,11 @@ import PersonName from "./name";
 import Request from "./request";
 import MenuBar from "./menuBar";
 import InfoMe from "./infoMe";
+import ApolloClientProvider from '../apollo/apolloProvider';
 
 export default function Menu() {
   return (
+    <ApolloClientProvider> 
     <div className="bg-customBlue z-0 relative">
       <div className="flex m-auto md:w-1440 w-360 md:h-190 h-157">
         <div className="md:mt-8 md:ml-20 md:relative md:z-0 mt-0 ml-0">
@@ -29,5 +31,6 @@ export default function Menu() {
         </div>
       </div>
     </div>
+    </ApolloClientProvider>
   );
 }

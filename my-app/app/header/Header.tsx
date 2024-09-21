@@ -1,19 +1,21 @@
 "use client";
 
 import React from "react";
+import ApolloClientProvider from '../apollo/apolloProvider';
+import { useAuthStore } from "../store/userAuthStore";
 import Logo from "./logo";
 import NavBar from "./navbar";
 import Search from "./search";
 import Utilities from "./utilites";
 
-import { useAuthStore } from "../store/userAuthStore";
 
 export default function Header() {
-  const access_token = useAuthStore((state) => state.password);
-  console.log(access_token);
+   const access_token = useAuthStore((state) => state.access_token)
+   console.log(access_token)
   return (
     <>
       {access_token && (
+        <ApolloClientProvider>
         <header className=" bg-white">
           <div className="flex justify-between md:m-auto md:w-1440 md:h-86 w-360 h-50 py-1.5 px-6 md:py-0 ">
             <Logo />
@@ -25,10 +27,10 @@ export default function Header() {
                 <NavBar />
               </div>
             </div>
-
             <Utilities />
           </div>
         </header>
+        </ApolloClientProvider>
       )}
     </>
   );
